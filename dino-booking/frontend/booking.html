@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จองไดโนเสาร์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form id="bookingForm">
+        <label for="name">ชื่อของคุณ:</label>
+        <input type="text" id="name" placeholder="กรอกชื่อของคุณ" required>
+    
+        <label for="dino">เลือกไดโนเสาร์:</label>
+        <select id="dino">
+            <option value="t-rex">T-Rex</option>
+            <option value="triceratops">Triceratops</option>
+            <option value="MooJane">MooJane</option>
+        </select>
+    
+        <label for="date">วันที่ต้องการจอง:</label>
+        <input type="date" id="date" required>
+    
+        <button type="button" onclick="confirmBooking()">จองเลย</button>
+    </form>
+    
+
+    <script>function confirmBooking() {
+        let nameInput = document.getElementById("name").value;
+        let dinoInput = document.getElementById("dino").value;
+        let dateInput = document.getElementById("date").value;
+    
+        if (!nameInput || !dateInput) {
+            alert("กรุณากรอกชื่อและเลือกวันที่ก่อนทำการจอง!");
+            return;
+        }
+    
+        localStorage.setItem("customerName", nameInput);
+        localStorage.setItem("dinoName", dinoInput);
+        localStorage.setItem("bookingDate", dateInput);
+    
+        window.location.href = "confirmation.html"; // ไปหน้าการจองสำเร็จ
+    }
+    </script>
+    <script src="script.js"></script> <!-- โหลด JavaScript -->
+</body>
+
+</html>
