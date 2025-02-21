@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Book a Dino</h1> <!--ชื่อหน้าจองไดโนเสาร์ -->
+    </header>
+
+    <main>
+        <form id="booking-form"> <!-- form สำหรับกรอกข้อมูลการจอง -->
+
+        <!--ช่องกรอกชื่อ-->
+        <table for="name">Your Name:</table>
+        <input type="text"  id="name" required> 
+
+        <!-- ช่องเเลือกวันที่ -->
+        <label for="data">Booking Date:</label>
+        <input type="date" id="date" required>
+
+        <!-- ปุ่มยืนยันการจอง -->
+        <button type="submit">Confime</button>
+        </form>
+
+        <script src="scipt.js"></script>
+    </main>
+</body>
+</html>
